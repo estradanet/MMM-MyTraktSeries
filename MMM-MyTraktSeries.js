@@ -61,8 +61,8 @@ Module.register("MMM-MyTraktSeries", {
                 var tableHeader = wrapper.insertRow(-1);
                 title = this.shorten(aux[i].nextEp, 19);
                 tableHeader.insertCell(0).outerHTML = '<td class="ColLeft">' + this.shorten(aux[i].nome ,18) + '</td>';
-                tableHeader.insertCell(2).outerHTML = '<td class="ColCenter">' + title + '</td>';
-                tableHeader.insertCell(1).outerHTML = '<td class="ColRight">' + aux[i].dif + '</td>';                
+                tableHeader.insertCell(1).outerHTML = '<td class="ColCenter">' + title + '</td>';   
+                tableHeader.insertCell(2).outerHTML = '<td class="ColRight">' + aux[i].dif + '</td>';                                            
             }
         }
         return wrapper;

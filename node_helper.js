@@ -74,7 +74,7 @@ module.exports = NodeHelper.create({
 
                                 /*  If there is no name assign, the name will be "Episode number XX" being the XX the number of the episode  */
 
-                                SeriesList[tvShow].show.title ? name = info.next_episode.title : name = "Episódio Número " + info.next_episode.number
+                                SeriesList[tvShow].show.title ? name = info.next_episode.title : name = "Episodio Número " + info.next_episode.number
                                 
                                 Episodes.push({
                                     nome : SeriesList[tvShow].show.title, 

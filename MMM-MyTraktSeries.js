@@ -34,7 +34,7 @@ Module.register("MMM-MyTraktSeries", {
         if (Object.keys(this.dados).length === 0) {
             var wrapper = document.createElement("div");
 
-            this.traktCode != "" ? wrapper.innerHTML = "https://trakt.tv/activate: " + this.traktCode : wrapper.innerHTML = "   LOADING........";
+            this.traktCode != "" ? wrapper.innerHTML = "https://trakt.tv/activate: " + this.traktCode : wrapper.innerHTML = "   Loading...";
             
             wrapper.className = "small";
         } else {

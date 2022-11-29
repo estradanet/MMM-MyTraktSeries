@@ -41,8 +41,8 @@ Module.register("MMM-MyTraktSeries", {
             var heading = wrapper.insertRow(0);
             wrapper.className = "small tabelaTrakt";
             heading.insertCell(0).outerHTML = '<th class="ColLeft">' + this.translate('TITLE') + '</th>';
-            heading.insertCell(1).outerHTML = '<th class="ColCenter">' + this.translate('TOSEE') + '</th>';
-            heading.insertCell(2).outerHTML = '<th class="ColRight">' + this.translate('EPTITLE') + '</th>';
+            heading.insertCell(1).outerHTML = '<th class="ColCenter">' + this.translate('EPTITLE') + '</th>';
+            heading.insertCell(2).outerHTML = '<th class="ColRight">' + this.translate('TOSEE') + '</th>';
             this.dados.sort(function (a, b) {
                 return a.nome.localeCompare(b.nome);
             });
@@ -60,8 +60,8 @@ Module.register("MMM-MyTraktSeries", {
                 var tableHeader = wrapper.insertRow(-1);
                 title = this.shorten(aux[i].nextEp, 19);
                 tableHeader.insertCell(0).outerHTML = '<td class="ColLeft">' + this.shorten(aux[i].nome ,18) + '</td>';
-                tableHeader.insertCell(1).outerHTML = '<td class="ColCenter">' + aux[i].dif + '</td>';
-                tableHeader.insertCell(2).outerHTML = '<td class="ColRight">' + title + '</td>';
+                tableHeader.insertCell(2).outerHTML = '<td class="ColCenter">' + title + '</td>';
+                tableHeader.insertCell(1).outerHTML = '<td class="ColRight">' + aux[i].dif + '</td>';                
             }
         }
         return wrapper;

@@ -29,24 +29,28 @@ module.exports = NodeHelper.create({
                 }
             });
         }
-        importoldtoken().catch(function () {
-            return trakt.get_codes().then(function (poll) {
-                self.sendSocketNotification("OAuth", {
-                    code: poll.user_code
-                });
-                return trakt.poll_access(poll);
-            }).catch(error => {
-                console.log(error.message);
-            }).then(function () {
-                importtoken = trakt.export_token();
+        importoldtoken().catch(function(){
+          return trakt.get_codes().then(function(poll) {
+              self.log('Trakt Access Code: ' + poll.user_code);
+              self.sendSocketNotification("OAuth", {
+                  code: poll.user_code
+              });
+              return trakt.poll_access(poll);
+          }).catch(error => {
+            self.errorLog(error, new Error());
+            return Promise.reject(error);
+          }).then(function(){
+            importtoken = trakt.export_token();
                 fs.writeFile("./modules/MMM-MyTraktSeries/token.json", JSON.stringify(importtoken), "utf8", function (err, data) {
                     if (err) {
-                        return console.log(err);
+                        return self.errorLog(err, new Error());
                     }
                 });
             });
         }).then(function () {
             trakt.import_token(importtoken).then(newTokens => {
+                self.log(importtoken);
+                self.debugLog(trakt);
                 //console.log(importtoken);
                 //console.log(trakt);
 

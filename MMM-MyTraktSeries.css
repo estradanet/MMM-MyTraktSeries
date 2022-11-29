@@ -3,16 +3,18 @@
     Title of the table header
 */
 th {
-    font-size: 20px !important;
-    color: rgb(41, 192, 255) !important;
-    padding-bottom: 5px;
+    font-size: 0.9rem !important;
+	border-bottom: solid 1px #222;
+    font-weight: bold !important;
+    color: var(--color-text) !important;
+    padding-bottom: 3px;
 }
 /*
     Rows of the table content
 */
 td {
     margin-left: 10px;
-    font-size: 20px;
+    font-size: 0.9rem;
     line-height: 25px;
 }
 /*
@@ -20,7 +22,7 @@ td {
 */
 .ColLeft {
     text-align: left;
-    font-size: 21px;
+    font-size: 0.9rem;
     color: #fff;
 }
 /*

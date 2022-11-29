@@ -7,14 +7,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TheVieiraAkA/MMM-MyTraktSeries.git"
+    "url": "git+https://github.com/estradanet/MMM-MyTraktSeries.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/TheVieiraAkA/MMM-MyTraktSeries/issues"
+    "url": "https://github.com/estradanet/MMM-MyTraktSeries/issues"
   },
-  "homepage": "https://github.com/TheVieiraAkA/MMM-MyTraktSeries#readme",
+  "homepage": "https://github.com/estradanet/MMM-MyTraktSeries#readme",
   "dependencies": {
     "trakt.tv": "^6.0.2",
     "trakt.tv-images": "^5.1.1"

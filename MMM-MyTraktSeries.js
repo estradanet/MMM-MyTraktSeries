@@ -7,6 +7,7 @@ Module.register("MMM-MyTraktSeries", {
     getTranslations() {
         return {
             en: 'translations/en.json',
+            es: 'translations/es.json',
             de: 'translations/de.json',
             kr: 'translations/kr.json',
             pt: 'translations/pt.json'
